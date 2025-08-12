@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auguri di Anniversario per Sakib e Mim</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #f9f7fe 0%, #eef2ff 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            color: #4a154b;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 10% 20%, rgba(255, 223, 223, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(219, 234, 254, 0.1) 0%, transparent 20%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin: 2rem 0 4rem;
+            position: relative;
+            padding: 0 2rem;
+        }
+
+        .floral-corner {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            z-index: 1;
+        }
+
+        .floral-corner.top-left {
+            top: -15px;
+            left: -15px;
+            transform: rotate(180deg);
+        }
+
+        .floral-corner.top-right {
+            top: -15px;
+            right: -15px;
+            transform: scaleX(-1);
+        }
+
+        .floral-corner.bottom-left {
+            bottom: -15px;
+            left: -15px;
+            transform: scaleY(-1);
+        }
+
+        .floral-corner.bottom-right {
+            bottom: -15px;
+            right: -15px;
+            transform: scale(-1);
+        }
+
+        .crown {
+            font-size: 2.5rem;
+            color: #d4af37;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #8a2be2, #ff6b6b);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            position: relative;
+            z-index: 2;
+        }
+
+        .subtitle {
+            font-size: 1.8rem;
+            color: #6a0dad;
+            font-weight: 300;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+            position: relative;
+            z-index: 2;
+        }
+
+        .flower-divider {
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1.5rem 0;
+            position: relative;
+        }
+
+        .flower-divider::before,
+        .flower-divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 2px dashed #e0d5f9;
+        }
+
+        .flower-divider::before {
+            margin-right: 15px;
+        }
+
+        .flower-divider::after {
+            margin-left: 15px;
+        }
+
+        .flower-icon {
+            font-size: 2rem;
+            color: #ff6b6b;
+            margin: 0 10px;
+            animation: sway 6s infinite ease-in-out;
+        }
+
+        @keyframes sway {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-5px) rotate(3deg); }
+            75% { transform: translateY(-3px) rotate(-2deg); }
+        }
+
+        .names {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2.5rem 0;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
+        }
+
+        .name-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem 3rem;
+            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.2);
+            text-align: center;
+            min-width: 280px;
+            transition: all 0.4s ease;
+            border: 2px solid #e0d5f9;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .name-card::before {
+            content: '\f861';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.5rem;
+            color: #ff6b6b;
+            opacity: 0.2;
+        }
+
+        .name-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(138, 43, 226, 0.3);
+            border-color: #8a2be2;
+        }
+
+        .name-card:hover::before {
+            opacity: 0.4;
+            transform: scale(1.2);
+            transition: all 0.3s ease;
+        }
+
+        .name-card h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4.2rem;
+            color: #8a2be2;
+            margin-bottom: 0.5rem;
+        }
+
+        .name-card .role {
+            color: #6a0dad;
+            font-weight: 600;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hearts {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+            font-size: 1.8rem;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin: 3rem 0;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        @media (max-width: 900px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .message-container {
+            background: white;
+            border-radius: 25px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #f0e6ff;
+        }
+
+        .message-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, #ff6b6b, #8a2be2, #4ecdc4);
+        }
+
+        .message {
+            font-size: 1.8rem;
+            line-height: 1.7;
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            color: #2d0d3d;
+            position: relative;
+            z-index: 2;
+        }
+
+        .message-highlight {
+            background: linear-gradient(120deg, rgba(255, 215, 0, 0.3), rgba(255, 215, 0, 0.3));
+            padding: 0 8px;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+
+        .decoration {
+            position: absolute;
+            opacity: 0.07;
+            z-index: 1;
+            font-size: 12rem;
+        }
+
+        .decoration-1 {
+            top: 20px;
+            right: 30px;
+            transform: rotate(15deg);
+            color: #ff6b6b;
+        }
+
+        .decoration-2 {
+            bottom: 20px;
+            left: 30px;
+            transform: rotate(-10deg);
+            color: #8a2be2;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .photo {
+            border-radius: 15px;
+            overflow: hidden;
+            height: 220px;
+            position: relative;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            border: 3px solid white;
+            transition: all 0.4s ease;
+        }
+
+        .photo:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 25px rgba(138, 43, 226, 0.25);
+        }
+
+        .photo-1 {
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+            position: relative;
+        }
+
+        .photo-1::after {
+            content: '\f861';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 2rem;
+            color: white;
+            opacity: 0.7;
+        }
+
+        .photo-2 {
+            background: linear-gradient(45deg, #a1c4fd, #c2e9fb);
+            position: relative;
+        }
+
+        .photo-2::after {
+            content: '\f740';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 2rem;
+            color: white;
+            opacity: 0.7;
+        }
+
+        .photo-3 {
+            background: linear-gradient(45deg, #ffecd2, #fcb69f);
+            position: relative;
+        }
+
+        .photo-3::after {
+            content: '\f741';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 2rem;
+            color: white;
+            opacity: 0.7;
+        }
+
+        .photo-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem;
+            background: rgba(74, 21, 75, 0.85);
+            color: white;
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+        }
+
+        .photo:hover .photo-content {
+            transform: translateY(0);
+        }
+
+        .photo-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .interactive-section {
+            text-align: center;
+            margin: 4rem 0;
+            padding: 3rem;
+            background: white;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border: 1px solid #f0e6ff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .interactive-section::before {
+            content: '\f861 \f740 \f741 \f742 \f861 \f740 \f741 \f742';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            font-size: 1.5rem;
+            color: #ff6b6b;
+            opacity: 0.05;
+            z-index: 1;
+        }
+
+        .interactive-section h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            color: #8a2be2;
+            font-family: 'Playfair Display', serif;
+            position: relative;
+            z-index: 2;
+        }
+
+        .instructions {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+            color: #5a2d82;
+            line-height: 1.6;
+            position: relative;
+            z-index: 2;
+        }
+
+        .heart-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+
+        .heart-base {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 10rem;
+            color: #ff6b6b;
+            text-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .heart-container:hover .heart-base {
+            transform: translate(-50%, -50%) scale(1.1);
+            text-shadow: 0 8px 25px rgba(255, 107, 107, 0.6);
+        }
+
+        .floating-hearts {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .floating-heart {
+            position: absolute;
+            font-size: 1.5rem;
+            opacity: 0;
+            animation: float 15s infinite linear;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) translateX(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(20px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .floating-flowers {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 9998;
+        }
+
+        .floating-flower {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+            animation: flower-float 25s infinite linear;
+        }
+
+        @keyframes flower-float {
+            0% {
+                transform: translateY(0) translateX(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.8;
+            }
+            90% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(50px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #8a2be2, #6a0dad);
+            color: white;
+            padding: 1.2rem 3rem;
+            font-size: 1.4rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            box-shadow: 0 8px 20px rgba(138, 43, 226, 0.4);
+            transition: all 0.3s ease;
+            border: 2px solid #8a2be2;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(138, 43, 226, 0.6);
+            background: linear-gradient(45deg, #6a0dad, #8a2be2);
+        }
+
+        .cta-button i {
+            margin-left: 10px;
+            transition: transform 0.3s;
+        }
+
+        .cta-button:hover i {
+            transform: translateX(5px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 0 2rem;
+            color: #6a0dad;
+            font-size: 1.2rem;
+            border-top: 1px dashed #e0d5f9;
+            margin-top: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .floating-element {
+            position: fixed;
+            z-index: -1;
+            opacity: 0.15;
+            font-size: 3rem;
+            animation: drift 25s infinite linear;
+        }
+
+        @keyframes drift {
+            0% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(100vw, -100vh);
+            }
+        }
+
+        .cursor-fx {
+            position: fixed;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: rgba(138, 43, 226, 0.2);
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: 9999;
+            mix-blend-mode: overlay;
+            transition: all 0.2s ease;
+        }
+
+        .cursor-fx.active {
+            width: 50px;
+            height: 50px;
+            background: rgba(138, 43, 226, 0.1);
+        }
+
+        .floral-frame {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .floral-frame svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 3.2rem;
+            }
+            .subtitle {
+                font-size: 1.4rem;
+            }
+            .message {
+                font-size: 1.5rem;
+            }
+            .floral-corner {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cursor-fx" id="cursor"></div>
+    
+    <!-- Floral frame around the page -->
+    <div class="floral-frame">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path d="M10,0 L90,0 C95,0 100,5 100,10 L100,90 C100,95 95,100 90,100 L10,100 C5,100 0,95 0,90 L0,10 C0,5 5,0 10,0" 
+                  fill="none" stroke="rgba(138, 43, 226, 0.08)" stroke-width="0.3" />
+            <path d="M15,5 L85,5 C90,5 95,10 95,15 L95,85 C95,90 90,95 85,95 L15,95 C10,95 5,90 5,85 L5,15 C5,10 10,5 15,5" 
+                  fill="none" stroke="rgba(138, 43, 226, 0.05)" stroke-width="0.2" />
+        </svg>
+    </div>
+    
+    <!-- Floating decorative elements -->
+    <div class="floating-element" style="top: 10%; left: 5%; animation-delay: 0s;">💖</div>
+    <div class="floating-element" style="top: 20%; left: 90%; animation-delay: -5s;">✨</div>
+    <div class="floating-element" style="top: 70%; left: 5%; animation-delay: -10s;">🌹</div>
+    <div class="floating-element" style="top: 85%; left: 85%; animation-delay: -15s;">💫</div>
+    <div class="floating-element" style="top: 40%; left: 15%; animation-delay: -20s;">💞</div>
+
+    <div class="container">
+        <header>
+            <div class="floral-corner top-left">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20,80 C30,65 45,60 50,50 C55,60 70,65 80,80 C75,85 65,88 50,88 C35,88 25,85 20,80" 
+                          fill="none" stroke="#ff6b6b" stroke-width="1.5" opacity="0.3"/>
+                    <circle cx="50" cy="50" r="8" fill="none" stroke="#8a2be2" stroke-width="1.2" opacity="0.3"/>
+                    <path d="M50,42 C55,35 65,32 70,40 C65,30 55,25 50,30 C45,25 35,30 30,40 C35,32 45,35 50,42" 
+                          fill="none" stroke="#ff9a9e" stroke-width="1" opacity="0.4"/>
+                </svg>
+            </div>
+            <div class="floral-corner top-right">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20,80 C30,65 45,60 50,50 C55,60 70,65 80,80 C75,85 65,88 50,88 C35,88 25,85 20,80" 
+                          fill="none" stroke="#ff6b6b" stroke-width="1.5" opacity="0.3"/>
+                    <circle cx="50" cy="50" r="8" fill="none" stroke="#8a2be2" stroke-width="1.2" opacity="0.3"/>
+                    <path d="M50,42 C55,35 65,32 70,40 C65,30 55,25 50,30 C45,25 35,30 30,40 C35,32 45,35 50,42" 
+                          fill="none" stroke="#ff9a9e" stroke-width="1" opacity="0.4"/>
+                </svg>
+            </div>
+            
+            <div class="crown">
+                <i class="fas fa-crown"></i>
+            </div>
+            <h1>Auguri di Anniversario</h1>
+            <p class="subtitle">Celebriamo l'amore straordinario che unisce due cuori meravigliosi in un viaggio indimenticabile</p>
+            
+            <div class="flower-divider">
+                <i class="fas fa-spa flower-icon"></i>
+                <i class="fas fa-seedling flower-icon" style="animation-delay: 0.5s;"></i>
+                <i class="fas fa-leaf flower-icon" style="animation-delay: 1s;"></i>
+            </div>
+        </header>
+
+        <div class="names">
+            <div class="name-card">
+                <div class="role">Caro Fratello</div>
+                <h2>Sakib</h2>
+                <div class="hearts">
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart"></i>
+                </div>
+                
+            </div>
+            
+            <div class="name-card">
+                <div class="role">Cara Sorella</div>
+                <h2>Mum</h2>
+                <div class="hearts">
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart"></i>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="message-container">
+                <div class="decoration decoration-1">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="decoration decoration-2">
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="message">
+                    "Oggi celebriamo non solo <span class="message-highlight">un anniversario</span>,<br>
+                    ma <span class="message-highlight">un'eternità di momenti condivisi</span>.<br>
+                    Per <span class="message-highlight">Sakib e Mim</span>,<br>
+                    che dimostrano ogni giorno<br>
+                    che <span class="message-highlight">l'amore è la forza più potente</span> del mondo.<br>
+                    Con tutto il nostro affetto,<br>
+                    <strong>la vostra famiglia</strong>"
+                </p>
+            </div>
+            
+            <div class="gallery">
+                <div class="photo photo-1">
+                    <div class="photo-content">
+                        <h3><i class="fas fa-spa"></i> Il Giorno Speciale</h3>
+                        <p>Quando due cuori hanno scelto di diventare uno</p>
+                    </div>
+                </div>
+                <div class="photo photo-2">
+                    <div class="photo-content">
+                        <h3><i class="fas fa-seedling"></i> Momenti Indimenticabili</h3>
+                        <p>Risate che sono diventate ricordi</p>
+                    </div>
+                </div>
+                <div class="photo photo-3">
+                    <div class="photo-content">
+                        <h3><i class="fas fa-leaf"></i> Insieme per Sempre</h3>
+                        <p>Ogni giorno è una nuova avventura</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="interactive-section">
+            <div class="floral-corner bottom-left">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20,80 C30,65 45,60 50,50 C55,60 70,65 80,80 C75,85 65,88 50,88 C35,88 25,85 20,80" 
+                          fill="none" stroke="#ff6b6b" stroke-width="1.5" opacity="0.3"/>
+                    <circle cx="50" cy="50" r="8" fill="none" stroke="#8a2be2" stroke-width="1.2" opacity="0.3"/>
+                    <path d="M50,42 C55,35 65,32 70,40 C65,30 55,25 50,30 C45,25 35,30 30,40 C35,32 45,35 50,42" 
+                          fill="none" stroke="#ff9a9e" stroke-width="1" opacity="0.4"/>
+                </svg>
+            </div>
+            <div class="floral-corner bottom-right">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20,80 C30,65 45,60 50,50 C55,60 70,65 80,80 C75,85 65,88 50,88 C35,88 25,85 20,80" 
+                          fill="none" stroke="#ff6b6b" stroke-width="1.5" opacity="0.3"/>
+                    <circle cx="50" cy="50" r="8" fill="none" stroke="#8a2be2" stroke-width="1.2" opacity="0.3"/>
+                    <path d="M50,42 C55,35 65,32 70,40 C65,30 55,25 50,30 C45,25 35,30 30,40 C35,32 45,35 50,42" 
+                          fill="none" stroke="#ff9a9e" stroke-width="1" opacity="0.4"/>
+                </svg>
+            </div>
+            
+            <h2>Un Regalo Speciale per Voi</h2>
+            <p class="instructions">
+                Passa il mouse sul cuore per vedere apparire magiche scintille d'amore.<br>
+                Clicca per riempire lo schermo di cuori che celebrano il vostro amore!
+            </p>
+            
+            <div class="heart-container" id="heartContainer">
+                <div class="heart-base">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="floating-hearts" id="floatingHearts"></div>
+            </div>
+            
+            <a href="#" class="cta-button" id="fullScreenHearts">
+                Riempi lo schermo di amore <i class="fas fa-heart"></i>
+            </a>
+        </div>
+        
+        <div class="floating-flowers" id="floatingFlowers"></div>
+
+        <footer>
+            <p>Con amore da tutta la famiglia • Realizzato con <i class="fas fa-heart" style="color:#ff6b6b;"></i> per il vostro anniversario</p>
+            <p style="margin-top: 10px; font-size: 1rem; color: #8a2be2;">"L'amore non è guardarsi negli occhi, è guardare insieme nella stessa direzione." - Antoine de Saint-Exupéry</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cursor = document.getElementById('cursor');
+            const heartContainer = document.getElementById('heartContainer');
+            const floatingHearts = document.getElementById('floatingHearts');
+            const floatingFlowers = document.getElementById('floatingFlowers');
+            const fullScreenHeartsBtn = document.getElementById('fullScreenHearts');
+            
+            // Cursor follow effect
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            });
+            
+            heartContainer.addEventListener('mouseenter', () => {
+                cursor.classList.add('active');
+            });
+            
+            heartContainer.addEventListener('mouseleave', () => {
+                cursor.classList.remove('active');
+            });
+            
+            // Heart hover effect
+            heartContainer.addEventListener('mousemove', (e) => {
+                const x = e.offsetX;
+                const y = e.offsetY;
+                
+                // Create floating hearts on hover
+                if (Math.random() > 0.7) {
+                    createFloatingHeart(e.clientX, e.clientY);
+                }
+                
+                // Create occasional flowers on hover
+                if (Math.random() > 0.9) {
+                    createFloatingFlower(e.clientX, e.clientY);
+                }
+            });
+            
+            // Click to create hearts
+            heartContainer.addEventListener('click', (e) => {
+                for (let i = 0; i < 15; i++) {
+                    setTimeout(() => {
+                        createFloatingHeart(e.clientX, e.clientY);
+                    }, i * 50);
+                }
+            });
+            
+            fullScreenHeartsBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                for (let i = 0; i < 50; i++) {
+                    setTimeout(() => {
+                        const x = Math.random() * window.innerWidth;
+                        const y = Math.random() * window.innerHeight;
+                        createFloatingHeart(x, y, true);
+                    }, i * 30);
+                }
+                
+                // Add flower rain effect
+                for (let i = 0; i < 30; i++) {
+                    setTimeout(() => {
+                        const x = Math.random() * window.innerWidth;
+                        createFloatingFlower(x, window.innerHeight + 50, true);
+                    }, i * 100);
+                }
+                
+                // Add celebration effect
+                heartContainer.style.transform = 'scale(1.05)';
+                setTimeout(() => {
+                    heartContainer.style.transform = 'scale(1)';
+                }, 300);
+            });
+            
+            // Periodic flower rain
+            setInterval(() => {
+                if (Math.random() > 0.7) {
+                    const x = Math.random() * window.innerWidth * 0.8 + window.innerWidth * 0.1;
+                    createFloatingFlower(x, window.innerHeight + 50);
+                }
+            }, 2000);
+            
+            function createFloatingHeart(x, y, fullScreen = false) {
+                const heart = document.createElement('div');
+                heart.innerHTML = '<i class="fas fa-heart"></i>';
+                heart.className = 'floating-heart';
+                
+                // Random size
+                const size = fullScreen ? 
+                    1.2 + Math.random() * 1.8 : 
+                    0.8 + Math.random() * 1.2;
+                heart.style.fontSize = `${size}rem`;
+                
+                // Random color
+                const colors = ['#ff6b6b', '#8a2be2', '#ff9a9e', '#fad0c4', '#a1c4fd', '#c2e9fb'];
+                heart.style.color = colors[Math.floor(Math.random() * colors.length)];
+                
+                // Position
+                heart.style.left = `${x}px`;
+                heart.style.top = `${y}px`;
+                
+                // Animation
+                const duration = 8 + Math.random() * 12;
+                heart.style.animationDuration = `${duration}s`;
+                
+                floatingHearts.appendChild(heart);
+                
+                // Remove after animation
+                setTimeout(() => {
+                    heart.remove();
+                }, duration * 1000);
+            }
+            
+            function createFloatingFlower(x, y, fullScreen = false) {
+                const flowers = [
+                    '<i class="fas fa-spa"></i>',
+                    '<i class="fas fa-seedling"></i>',
+                    '<i class="fas fa-leaf"></i>',
+                    '<i class="fas fa-crown"></i>',
+                    '<i class="fas fa-star"></i>'
+                ];
+                
+                const flower = document.createElement('div');
+                flower.innerHTML = flowers[Math.floor(Math.random() * flowers.length)];
+                flower.className = 'floating-flower';
+                
+                // Random size
+                const size = fullScreen ? 
+                    1.5 + Math.random() * 1.5 : 
+                    1.0 + Math.random() * 1.0;
+                flower.style.fontSize = `${size}rem`;
+                
+                // Random color
+                const colors = ['#ff6b6b', '#8a2be2', '#ff9a9e', '#a1c4fd', '#4ecdc4', '#fad0c4'];
+                flower.style.color = colors[Math.floor(Math.random() * colors.length)];
+                
+                // Position
+                flower.style.left = `${x}px`;
+                flower.style.top = `${y}px`;
+                
+                // Animation
+                const duration = 20 + Math.random() * 10;
+                flower.style.animationDuration = `${duration}s`;
+                
+                // Random rotation direction
+                const rotation = Math.random() > 0.5 ? 1 : -1;
+                flower.style.setProperty('--rotation', `${rotation}turn`);
+                
+                floatingFlowers.appendChild(flower);
+                
+                // Remove after animation
+                setTimeout(() => {
+                    if (flower.parentNode) {
+                        flower.remove();
+                    }
+                }, duration * 1000);
+            }
+            
+            // Create initial floating hearts
+            setInterval(() => {
+                const x = Math.random() * window.innerWidth * 0.8 + window.innerWidth * 0.1;
+                const y = window.innerHeight * 0.8;
+                createFloatingHeart(x, y);
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
